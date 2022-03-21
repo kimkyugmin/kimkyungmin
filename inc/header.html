@@ -1,0 +1,79 @@
+<nav id="navigation">
+  <header class="header">
+    <h1 class="header_logo">
+        <a href="/" data-animsition-out-class="fade-out-left" data-animsition-out-duration="800" class="animsition-link" >
+            KIM KYUNGMIN
+        </a>
+    </h1>
+    <button class="header_menu_button"><em class="blind">메뉴 버튼</em><div class="menu-button-shape"><span></span><span></span></div></button>
+  </header>
+  <div class="menu_view" style="display:none">
+    <div class="menu_view_dimd"></div>
+    <div class="menu_view_menubox">
+        <ul class="menu_view_left">
+          <li class="menu_view_left_item">
+            <a href="experience.html" data-animsition-out-class="fade-out-right"
+            data-animsition-out-duration="800"class="animsition-link">
+              <span class="menu_view_left_text">
+                <span class="mask_text"><span>eXperience</span></span>
+                <div class="n_badge">
+                  <div class="n_badge_wrap">
+                    <div class="n_badge_item">112</div>
+                  </div>
+                </div>
+              </span>
+            </a>
+          </li>
+          <li class="menu_view_left_item">
+            <a href="about.html" data-animsition-out-class="fade-out-right"
+            data-animsition-out-duration="800"class="animsition-link"><span class="menu_view_left_text">
+              <span class="mask_text">
+                <span>About</span>
+              </span></span>
+            </a>
+          </li>
+        </ul>
+    </div>
+  </div>
+  <div class="scrollbar">
+    <div class="scrollbar__track">
+      <div class="scrollbar__thumb"></div>
+    </div>
+  </div>
+</nav>
+<script type="text/javascript">
+  //메뉴 활성화
+  $(".header_menu_button").click(function(){
+    $(".header_logo").toggleClass("on");
+    $(this).toggleClass("on");
+    $(".menu_view").fadeToggle().toggleClass("show");
+    $(".n_badge_item").toggleClass("in");
+  })
+
+  $(".adClick").click(function(){
+      $(".featherlight").addClass("on");
+      $(".featherlight-close").removeClass("featherlight-close").addClass("down_close");
+      //$(".featherlight-inner").append("<span class='down_close'></span>"); // 태그 추가
+  })
+
+  $('body').on('click', '.down_close', function() {
+    $(".featherlight").removeClass("on");
+    setTimeout(function(){
+      $(".featherlight").remove();
+      $("html").removeClass()
+    }, 1500);
+  });
+
+  // 깜빡깜빡
+  var shown = true;
+  setInterval(blinkE, 600);
+  function blinkE() {
+      if(shown) {
+          $('.down_close').addClass("on");
+          shown = false;
+      } else {
+          $('.down_close').removeClass("on");
+          shown = true;
+      }
+  }
+</script>

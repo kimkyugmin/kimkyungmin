@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김경민 포트폴리오</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link href="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/animsition.css">
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script  src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-latest.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/animsition.min.js" charset="utf-8"></script>
+</head>
+<script type="text/javascript">
+  $(document).ready( function() {
+    $("#header").load("inc/header.html")
+  })
+</script> 
+<body>
+  <div id="wrap" class="animsition" data-animsition-in-class="fade-in-right-sm" data-animsition-in-duration="800" data-animsition-out-class="fade-out-right-sm" data-animsition-out-duration="800">
+    <div id="header"></div>
+    <main id="container">
+      <!-- s:상단 -->
+      <section class="about_cover_art">
+          <div class="full_bg">
+            <figure><img src="img/about/img_bg5.jpg" alt="해변"></figure>
+          </div>
+          <div class="big_tit">
+            <div class="about_keyword about_keyword_1"><span>ABOUT</span></div>
+            <div class="about_keyword about_keyword_2"><span>FOR</span></div>
+            <div class="about_keyword about_keyword_3"><span>KIM KYUNGMIN</span></div>
+          </div>
+          <div class="pic_source">
+            <div class="source_inner">
+              <figure>
+                <video autoplay="autoplay" muted="muted" loop="" preload="auto" class="video_cont" id="video4" width="100%"><source src="img/about/pic-source7.mp4" type="video/mp4"></video>
+              </figure>
+              <div class="source_mask"></div>
+            </div>
+          </div>
+      </section>
+      <!-- e:상단 -->
+      <!-- s:contact -->
+      <section class="about_info_contact" id="contact">
+        <div class="layout_text">
+          <div class="info">
+            <ul class="info_ex">
+              <li>
+                <div class="info_tit_list">
+                  <div class="mask_text"><span>김경민</span></div>
+                  <div class="mask_text"><span>1992.07.20</span></div>
+                  <div class="mask_text"><span>서울특별시 도봉구 거주</span></div>
+                </div>
+              
+              </li>
+              <li>
+                <div class="info_tit_list">
+                  <div class="mask_text"><span>경민대학교 | 정보통신학과 (졸업)</span></div>
+                  <div class="mask_text"><span>모바일 앱 ui/ux 디자인 (이수)</span></div>
+                  <br>
+                  <div class="mask_text"><span class="sub">- 교육기간: 2015.07 ~ 2015.09</span></div>
+                  <div class="mask_text"><span class="sub">- 교육내용: Photoshop, Illustrator, HTML5, CSS3, JavaScript, jQuery</span></div>
+                </div>
+              </li>
+            </ul>
+            <ul class="info_contact">
+              <li>
+                <div class="info_contact_name mask_text"><span>phon</span></div>
+                <div class="info_contact_value mask_text"><a href="tel:01048616169" class="txt_underline">+82 010 4861 6169</a></div>
+              </li>
+              <br>
+              <li>
+                <div class="info_contact_name mask_text"><span>yusmsom@naver.com</span></div>
+                <div class="info_contact_value mask_text"><a href="mailto:yusmsom@naver.com" target="_blank" class="txt_underline">yusmsom@naver.com</a></div>
+              </li>
+              <br>
+              <li>
+                <div class="info_contact_name mask_text"><span>kakao talk</span></div>
+                <div class="info_contact_value mask_text"><a href="https://open.kakao.com/o/smMLjC6d" target="_blank" class="txt_underline">ID:yusmsou</a></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- e:contact -->
+    </main>
+  </div>
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $('.animsition').animsition();
+  });
+
+    //휠 이벤트  
+    let scaleY = 1;
+    let dirY = 1;
+    let op = 1;
+    $(window).bind('wheel', function(event){
+        if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
+          // scroll up
+          if (scaleY > 1.01) {
+            if (dirY < 1) {
+              dirY+=5
+            }
+            if(op < 1){
+              op += op * 0.05;
+            }
+            scaleY -= scaleY * 0.01;
+          }
+        }
+        else {
+          // scroll down
+          if (scaleY < 1.3) {
+            if (dirY > -100) {
+              dirY-=5
+            }
+            if(op > 0.3){
+              op -= op * 0.05;
+            }
+            scaleY += scaleY * 0.01;
+          }
+        }
+      $(".about_cover_art .full_bg").css({transform:`scale(${scaleY}) translateY(${dirY}%)`, opacity:`${op}`});
+      console.log(op)
+    });
+
+    // scroll
+    $(window).scroll(function(){
+      var Area_pic =$('.pic_source').offset().top-300;
+      var Area_contact =$('#contact').offset().top;
+
+      // 상단 모션
+      if ($(window).scrollTop() >= Area_pic){
+          $('.source_mask').addClass("on")
+      } 
+      if ($(window).scrollTop() >= 100){
+        $('.about_keyword').addClass("on")
+      } 
+
+      // contact header class white
+      if ($(window).scrollTop() >= Area_contact){
+        $('.header_logo').addClass("white")
+        $('.header_menu_button').addClass("white")
+      } else {
+        $('.header_logo').removeClass("white")
+        $('.header_menu_button').removeClass("white")
+      } 
+      
+      //contact 모션
+      if ($(window).scrollTop() >= Area_contact-300){
+        $('.about_info_contact .info').addClass("on")
+
+      }
+ 
+
+    });
+  </script>
+</body>
+</html>
