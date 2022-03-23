@@ -159,7 +159,9 @@
   $(function(){
       var experience = new Swiper("#experience", {
           slidesPerView: "auto",
- 
+          mousewheel: {
+              eventsTarget:".main-content",
+          },
           pagination: {
               el: "#experience .swiper-pagination",
               type: "progressbar",

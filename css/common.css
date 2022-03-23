@@ -660,6 +660,37 @@
     right: 20px;
   }
 
+  .experience-item.fix {
+    padding-left: 5%;
+  }
+
+  .experience li {
+    width: 300px;
+    height: 270px;padding: 40px 20px 0 20px;
+  }
+
+  .experience p {
+    margin-bottom: 10px;
+  }
+
+  /* .experience li span {
+    font-size: 14px;
+  } */
+
+  .experience .line {
+    width: 270px;
+    margin-bottom: 20px;
+  }
+  .experience .square_line {
+    width: 255px;
+    height: 270px;
+  }
+
+  .experience .swiper-pagination-progressbar.swiper-pagination-horizontal {
+    left: 20px;
+    bottom: -25px;
+  }
+
   .experience_list li {
     margin: 10px 20px;
     width: calc(100% - 40px);
