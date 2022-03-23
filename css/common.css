@@ -403,6 +403,10 @@
   background: #85cdff;
 }
 
+.experience_list .item_frame .item_dimd.pnt_4 {
+  background: #3f3d3a;
+}
+
 .experience_list .item_frame .item_visual {
   position: absolute;
   width: 100%;
@@ -719,5 +723,9 @@
 
   .about_info_contact .info {
     padding:0 20px;
+  }
+
+  .about_info_contact .info .info_ex span {
+    font-size: 24px;
   }
 }
