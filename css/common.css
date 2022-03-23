@@ -67,13 +67,9 @@
   margin-left:0;
 }
 
-.experience li:hover {
+/* .experience li:hover .square_line {
   opacity:1;
-}
-
-.experience li:hover .square_line {
-  opacity:1;
-}
+} */
 
 .experience li a {
   display:block; 
@@ -115,9 +111,9 @@
   transition:0.5s;
 }
 
-.experience li:hover a {
+/* .experience li:hover a {
   opacity:1;
-}
+} */
 
 /* 페이징 */
 .experience .swiper-pagination-progressbar.swiper-pagination-horizontal {
