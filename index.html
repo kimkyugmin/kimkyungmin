@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/animsition.css">
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script  src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="//code.jquery.com/jquery-latest.js"></script>
+    <!-- <script src="//code.jquery.com/jquery-latest.js"></script> -->
     <script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/animsition.min.js" charset="utf-8"></script>
 </head>
@@ -22,13 +22,13 @@
   })
 </script>
 <body>
-  <div id="wrap" class="animsition" data-animsition-in-class="fade-in-left-sm" data-animsition-in-duration="800" data-animsition-out-class="fade-out-left-sm" data-animsition-out-duration="800">
+  <div id="wrap">
     <div id="header"></div>
     <main class="container">
         <section class="main-content">
-            <div class="video-bg">
+            <!-- <div class="video-bg">
                 <div class="item-video"><video muted autoplay loop playsinline width="100%"><source src="img/main/main.mp4" type="video/mp4"></video></div>
-            </div>
+            </div> -->
             <div class="experience-inner">
                 <div class="experience-item">
                   <div class="experience swiper-container" id="experience">
@@ -144,16 +144,16 @@
   </div>
 </body>
 <script type="text/javascript">
-  $(document).ready(function() {
-    $('.animsition').animsition();
-  });
+  // $(document).ready(function() {
+  //   $('.animsition').animsition();
+  // });
 
-  //로드 효과
-  $(document).ready(function(){
-      setTimeout(function(){
-          $('.experience-item').addClass('fix');
-      }, 300);
-  })
+  // //로드 효과
+  // $(document).ready(function(){
+  //     setTimeout(function(){
+  //         $('.experience-item').addClass('fix');
+  //     }, 300);
+  // })
 
   //메인 컨텐츠 스와이프
   $(function(){

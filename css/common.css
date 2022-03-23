@@ -34,7 +34,7 @@
 }
 
 .experience-item {
-  opacity: 0;
+  /* opacity: 0; */
   padding-left:19%; 
   width: 100%;
   transition: 1.2s; 
@@ -67,9 +67,13 @@
   margin-left:0;
 }
 
-/* .experience li:hover .square_line {
+.experience li:hover {
   opacity:1;
-} */
+}
+
+.experience li:hover .square_line {
+  opacity:1;
+}
 
 .experience li a {
   display:block; 
@@ -95,7 +99,7 @@
 
 .experience h3 {
   font-size: 32px;
-  color: #fff;
+  color: #000;
   font-weight: bold; 
   line-height:40px;
 }
@@ -111,9 +115,9 @@
   transition:0.5s;
 }
 
-/* .experience li:hover a {
+.experience li:hover a {
   opacity:1;
-} */
+}
 
 /* 페이징 */
 .experience .swiper-pagination-progressbar.swiper-pagination-horizontal {
