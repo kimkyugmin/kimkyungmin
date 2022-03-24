@@ -407,6 +407,18 @@
   background: #3f3d3a;
 }
 
+.experience_list .item_frame .item_dimd.pnt_5 {
+  background: #436ecc;
+}
+
+.experience_list .item_frame .item_dimd.pnt_6 {
+  background: #c3c3c6;
+}
+
+.experience_list .item_frame .item_dimd.pnt_7 {
+  background: #e1e1e1;
+}
+
 .experience_list .item_frame .item_visual {
   position: absolute;
   width: 100%;
